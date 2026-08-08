@@ -5,7 +5,7 @@
 # Date: 2025-05-31
 # Author: Sam Linton
 #
-from orbit import BLEServer
+from orbit.ble_server import BLEServer
 
 # Change this to the name of your BLE server
 server_name = 'BLE Test'

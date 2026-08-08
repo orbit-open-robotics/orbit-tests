@@ -15,12 +15,12 @@ in Thonny with the Pico connected.
 
 # Due to memory constraints, cannot move this into the orbit package!!!
 import sys
-sys.path.append('/lib/orbit')
-from machine import Pin, SPI
-from ili9341_display import ILI9341Display
-from colors import *
 import time
 import gc
+from machine import Pin, SPI
+from orbit.ili9341_display import ILI9341Display
+from orbit.colors import *
+
 
 
 # ---------------------------------------------------------------------

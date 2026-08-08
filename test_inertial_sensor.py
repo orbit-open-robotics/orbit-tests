@@ -10,9 +10,10 @@
 # GP0 - SDA
 # GP1 = SCL
 #
-from inertial_sensor import InertialSensor
 from time import sleep
 from machine import Pin, I2C
+from orbit.inertial_sensor import InertialSensor
+
 
 i2c = I2C(0, sda=Pin(0), scl=Pin(1), freq=400000)
 imu = InertialSensor(i2c, heading_threshold=0.3)

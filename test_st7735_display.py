@@ -17,13 +17,11 @@ ST7735Display class defaults to the red-tab init sequence. If colors
 look wrong (washed out, wrong tint, shifted image), you likely have a
 different tab variant - see our earlier discussion on tab colors.
 """
-import sys
-sys.path.append('/lib/orbit')
-from machine import Pin, SPI
-from st7735_display import ST7735Display  # adjust import to match your file/module name
-from colors import BLACK, WHITE, RED, GREEN, BLUE
 from time import sleep, sleep_us, ticks_ms, ticks_diff
 import gc
+from machine import Pin, SPI
+from orbit.st7735_display import ST7735Display  # adjust import to match your file/module name
+from orbit.colors import BLACK, WHITE, RED, GREEN, BLUE
 
 
 # ---------------------------------------------------------------------

@@ -1,7 +1,8 @@
-from orbit import oled
+from orbit.oled import Oled
 
 if __name__ == '__main__':
     from time import sleep
+    import os
     print(os.getcwd())
     oled = Oled(scl_pin = 9, sda_pin = 8)
     

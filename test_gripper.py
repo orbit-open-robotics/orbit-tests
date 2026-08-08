@@ -1,4 +1,4 @@
-from orbit import Gripper
+from orbit.gripper import Gripper
 # from time import sleep
 import uasyncio as asyncio
 
@@ -33,7 +33,7 @@ if __name__ == '__main__':
     from time import sleep
     
     # Create the gripper
-    pin: int = 17,
+    pin: int = 17
     raw_angle_0: float = 0.0
     angle_start: float = 0.0
     angle_end: float = 65.0

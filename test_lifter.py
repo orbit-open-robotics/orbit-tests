@@ -1,4 +1,4 @@
-from orbit import Lifter
+from orbit.lifter import Lifter
 import uasyncio as asyncio
 
 async def test_movement():

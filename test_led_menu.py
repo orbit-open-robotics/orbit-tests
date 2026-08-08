@@ -5,8 +5,8 @@
 from machine import Pin, Timer
 from time import sleep
 import uasyncio as asyncio
-from orbit import Led
-from orbit import Tester
+from orbit.led import Led
+from orbit.tester import Tester
 
 if __name__ == '__main__':
 

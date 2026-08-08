@@ -1,5 +1,5 @@
 from time import sleep
-from orbit import DriveTrain
+from orbit.drive_train import DriveTrain
 
     
 # Test the DriveTrain class

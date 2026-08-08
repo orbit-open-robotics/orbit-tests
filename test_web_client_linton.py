@@ -2,7 +2,7 @@
 # WebClient
 # Requires micropython.umqtt.simple library
 #
-from orbit import WebClient
+from orbit.web_client import WebClient
 from time import sleep
 
 if __name__ == "__main__":

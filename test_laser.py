@@ -1,7 +1,7 @@
 #
 # test_laser
 #
-from orbit import Laser
+from orbit.laser import Laser
 from time import sleep
 
 laser = Laser()

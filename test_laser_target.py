@@ -1,7 +1,7 @@
 #
 # test_laser_target
 #
-from orbit import LaserTarget
+from orbit.laser_target import LaserTarget
 
 def hit_function():
     print("Hit detected!")

@@ -5,7 +5,7 @@
 from machine import Pin, Timer
 from time import sleep
 import uasyncio as asyncio
-from orbit import Led
+from orbit.led import Led
 
 if __name__ == '__main__':
     try:

@@ -1,4 +1,5 @@
-from orbit import Tester, DriveTrain
+from orbit.tester import Tester
+from orbit.drive_train import DriveTrain
 from time import sleep
 
 def test_forward(dt: DriveTrain) -> None:

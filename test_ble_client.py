@@ -6,7 +6,7 @@
 # Author: Sam Linton
 # Description: A simple test script for a BLE client that receives and prints messages from a BLE server.
 #
-from orbit import BLEClient
+from orbit.ble_client import BLEClient
 
 # Change this to the name of your BLE server
 server_name = 'BLE Test'

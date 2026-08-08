@@ -1,7 +1,8 @@
-from orbit import PWMServoMotor
-from orbit import Tester
 from time import sleep
 import uasyncio as asyncio
+from orbit import PWMServoMotor
+from orbit.tester import Tester
+
 
 class PWMServoMotorTester(Tester):
     def __init__(self, pin=10):

@@ -2,7 +2,7 @@
 # test_buzzer.py
 #
 #
-from orbit import Buzzer
+from orbit.buzzer import Buzzer
 import uasyncio as asyncio
 from time import sleep
 

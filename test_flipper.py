@@ -1,8 +1,8 @@
-from orbit import ServoMotor, Flipper
+from orbit.flipper import Flipper
 import uasyncio as asyncio
 
 if __name__ == '__main__':
-    from orbit import PWMServoMotor
+    from orbit.pwm_servo_motor import PWMServoMotor
     from time import sleep
     
     raw_angle_0 = 0.0

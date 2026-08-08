@@ -1,7 +1,7 @@
 #
 # test_noggin
 #
-from orbit import Noggin
+from orbit.noggin import Noggin
 
 if __name__ == '__main__':
     from time import sleep
