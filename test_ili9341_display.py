@@ -1,5 +1,5 @@
 """
-Simple test script for ILI9341Display.
+Test script for ILI9341Display.
 
 Wiring assumptions (adjust pin numbers to match your actual wiring):
     SCK  -> GP18
@@ -9,8 +9,7 @@ Wiring assumptions (adjust pin numbers to match your actual wiring):
     DC (RS)   -> GP6
     RST (RES)  -> GP7
 
-Run this directly
-in Thonny with the Pico connected.
+Run this directly in Thonny with the Pico connected.
 """
 
 # Due to memory constraints, cannot move this into the orbit package!!!
@@ -21,28 +20,16 @@ from machine import Pin, SPI
 from orbit.ili9341_display import ILI9341Display
 from orbit.colors import *
 
-
-
 # ---------------------------------------------------------------------
-# 1. Set up SPI bus
-# ---------------------------------------------------------------------
-spi = SPI(0,
-          baudrate=40_000_000,
-          polarity=0,
-          phase=0,
-          sck=Pin(18),
-          mosi=Pin(19))
-
-# ---------------------------------------------------------------------
-# 2. Instantiate the display
-#    (cs, dc, rst are plain pin numbers per our design)
+# 1. Instantiate the display
 # ---------------------------------------------------------------------
 print("Initializing display...")
-display = ILI9341Display(spi, cs=8, dc=6, rst=7, width=240, height=320)
+display = ILI9341Display()
 print("Display initialized.")
 
 gc.collect()  # reclaim any garbage from init before measuring
 print("Free memory after display init:", gc.mem_free(), "bytes")
+print(display.defaults())
 
 def pause(label, seconds=1.5):
     """Print a label and give time to visually inspect the screen."""

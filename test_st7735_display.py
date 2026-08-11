@@ -1,5 +1,5 @@
 """
-Simple test script for ST7735Display.
+Test script for ST7735Display.
 
 Wiring assumptions (adjust pin numbers to match your actual wiring):
     SCK  -> GP18
@@ -17,32 +17,21 @@ ST7735Display class defaults to the red-tab init sequence. If colors
 look wrong (washed out, wrong tint, shifted image), you likely have a
 different tab variant - see our earlier discussion on tab colors.
 """
-from time import sleep, sleep_us, ticks_ms, ticks_diff
 import gc
+from time import sleep, sleep_us, ticks_ms, ticks_diff
 from machine import Pin, SPI
 from orbit.st7735_display import ST7735Display  # adjust import to match your file/module name
 from orbit.colors import BLACK, WHITE, RED, GREEN, BLUE
 
 
 # ---------------------------------------------------------------------
-# 1. Set up SPI bus
-# ---------------------------------------------------------------------
-spi = SPI(0,
-          baudrate=20_000_000,   # ST7735 modules are often less tolerant of very high speeds than ILI9341
-          polarity=0,
-          phase=0,
-          sck=Pin(18),
-          mosi=Pin(19))
-
-# ---------------------------------------------------------------------
-# 2. Instantiate the display
-#    (cs, dc, rst are plain pin numbers per our design)
+# 1. Instantiate the display
 # ---------------------------------------------------------------------
 gc.collect()
 print("Free memory before ST7735 init:", gc.mem_free())
 
 print("Initializing display...")
-display = ST7735Display(spi, cs=8, dc=6, rst=7, width=128, height=160)
+display = ST7735Display()
 print("Display initialized.")
 
 gc.collect()  # reclaim any garbage from init before measuring
