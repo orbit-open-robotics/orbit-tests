@@ -21,7 +21,8 @@ async def play_song(buzzer):
 
 
 if __name__ == '__main__':
-    buzzer = Buzzer(pin=22)
+    buzzer = Buzzer()
+    print(buzzer.defaults())
     
     try:
         print('Trying interrupted looped song')
